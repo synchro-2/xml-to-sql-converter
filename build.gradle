@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application' 
+
+mainClassName = 'com.xsconverter.XmlToSqlConverter'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+version = '1.0'
+//applicationDefaultJvmArgs = ["-Xms128m -Xmx128m -XX:+TieredCompilation -XX:+UseNUMA"]
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile 'org.postgresql:postgresql:9.4.1209.jre7'
+	compile 'com.zaxxer:HikariCP:2.4.7'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+	compile 'org.aeonbits.owner:owner:1.0.9'
+}
